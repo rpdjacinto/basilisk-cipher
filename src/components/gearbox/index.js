@@ -114,7 +114,7 @@ const GearBox = () => {
             <SmallGear x={-4} y={-4} size={'small'} isClockwise={false}/>
             <SmallGear x={48} y={48} size={'small'} isClockwise={true} />
             <LargeGear x={54} y={116} size={'large'} isClockwise={false} />
-            <LargeGear x={-72} y={159} size={'large'} isClockwise={true} />
+            <LargeGear x={-68} y={166} size={'large'} isClockwise={true} />
             <Overlay />
         </GearBoxWrapper>
     )
