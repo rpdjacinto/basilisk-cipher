@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/basilisk-cipher/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/basilisk-cipher/static/js/main.c443910f.chunk.js",
-    "main.js.map": "/basilisk-cipher/static/js/main.c443910f.chunk.js.map",
+    "main.js": "/basilisk-cipher/static/js/main.86050d32.chunk.js",
+    "main.js.map": "/basilisk-cipher/static/js/main.86050d32.chunk.js.map",
     "runtime-main.js": "/basilisk-cipher/static/js/runtime-main.a20f4c47.js",
     "runtime-main.js.map": "/basilisk-cipher/static/js/runtime-main.a20f4c47.js.map",
     "static/js/2.6152237b.chunk.js": "/basilisk-cipher/static/js/2.6152237b.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.a20f4c47.js",
     "static/js/2.6152237b.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.c443910f.chunk.js"
+    "static/js/main.86050d32.chunk.js"
   ]
 }
