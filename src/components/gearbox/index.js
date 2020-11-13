@@ -21,23 +21,13 @@ const Overlay = styled.div`
 `
 
 const clockwise = keyframes`
-    from {
-    transform: rotate(0deg);
-    }
+    0%   { transform: rotate(0deg) }
+    100% { transform: rotate(360deg) }
+`;
 
-    to {
-    transform: rotate(360deg);
-    }
-    `;
-
-    const counterClockwise = keyframes`
-    from {
-    transform: rotate(360deg);
-    }
-
-    to {
-    transform: rotate(0deg);
-    }
+const counterClockwise = keyframes`
+    0%   { transform: rotate(360deg) }
+    100% { transform: rotate(0deg) }
 `;
 
 const GearOuter = styled.div`
@@ -124,6 +114,7 @@ const GearBox = () => {
             <SmallGear x={-4} y={-4} size={'small'} isClockwise={false}/>
             <SmallGear x={48} y={48} size={'small'} isClockwise={true} />
             <LargeGear x={54} y={116} size={'large'} isClockwise={false} />
+            <LargeGear x={-72} y={159} size={'large'} isClockwise={true} />
             <Overlay />
         </GearBoxWrapper>
     )
