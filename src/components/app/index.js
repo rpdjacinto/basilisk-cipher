@@ -4,9 +4,11 @@ import Background from '../../components/background'
 import Cipher from '../../components/cipher'
 
 const App = () => {
-    return (<Background>
-        <Cipher />
-    </Background>)
+    return (
+        <Background>
+            <Cipher />
+        </Background>
+    )
 }
 
 export default App
