@@ -1,4 +1,4 @@
-import { values } from './lookup-table.json'
+import { values } from './key.json'
 
 export const getPassword = (month, day, hour) => {
     const x = (month + hour) % values.length

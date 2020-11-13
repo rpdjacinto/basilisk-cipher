@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleUp, faAngleDown } from '@fortawesome/free-solid-svg-icons'
 
-const InputWrapper = styled.div`
+const DialWrapper = styled.div`
     height: 100%;
     width: 64px;
     margin: 8px;
@@ -11,7 +11,7 @@ const InputWrapper = styled.div`
     flex-direction: column;
 `
 
-const InputWheelWrapper = styled.div`
+const DialWheelWrapper = styled.div`
     flex: 5;
     border: 4px solid #997b66;
     border-radius: 8px;
@@ -19,7 +19,7 @@ const InputWheelWrapper = styled.div`
     display: flex;
     flex-direction: column;
 `
-const InputWheelDial = styled.div`
+const DialWheel = styled.div`
     flex: 4;
     background-image: linear-gradient(#acacac, #fefefe, #fefefe, #acacac);
     display: grid;
@@ -27,14 +27,14 @@ const InputWheelDial = styled.div`
     font-size: 24px;
 `
 
-const InputHint = styled.div`
+const DialHint = styled.div`
     flex: 1;
     font-size: 18px;
     color: #997b66;
     text-align: center;
 `
 
-const InputWheelButton = styled.button`
+const DialButton = styled.button`
     flex: 1;
     margin: 0;
     padding: 8px 16px;
@@ -49,28 +49,28 @@ const InputWheelButton = styled.button`
     text-align: center;
 `
 
-const InputWheel = ({ hint, value, maxValue, onValueChange }) => {
+const Dial = ({ hint, value, minValue = 1, maxValue, onValueChange }) => {
     const hintComponent = hint ? (
-        <InputHint>
+        <DialHint>
             <FontAwesomeIcon icon={hint} />
-        </InputHint>
+        </DialHint>
     ) : null
     return (
-        <InputWrapper>
+        <DialWrapper>
             { hintComponent }
-            <InputWheelWrapper>
-                <InputWheelButton onClick={ () => { onValueChange(value - 1 > 0 ? value - 1 : maxValue) } } >
+            <DialWheelWrapper>
+                <DialButton onClick={ () => { onValueChange(value - 1 >= minValue ? value - 1 : maxValue) } } >
                     <FontAwesomeIcon icon={faAngleUp} />
-                </InputWheelButton>
-                <InputWheelDial>
+                </DialButton>
+                <DialWheel>
                     {value}
-                </InputWheelDial>
-                <InputWheelButton onClick={ () => { onValueChange((value + 1) <= maxValue ? value + 1 : 1 ) } }>
+                </DialWheel>
+                <DialButton onClick={ () => { onValueChange((value + 1) <= maxValue ? value + 1 : minValue ) } }>
                     <FontAwesomeIcon icon={faAngleDown} />
-                </InputWheelButton>
-            </InputWheelWrapper>
-        </InputWrapper>
+                </DialButton>
+            </DialWheelWrapper>
+        </DialWrapper>
     )
 }
 
-export default InputWheel
+export default Dial
